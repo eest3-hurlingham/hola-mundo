@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}Saludo a {{ nombre }}{% endblock %}
+
+{% block contenido %}
+<div class="tarjeta">
+    <h2>{{ mensaje }}</h2>
+    <h3>Hola, {{ nombre|capfirst }}! 👋</h3>
+    <p>Tu nombre llegó desde la URL hasta este template pasando por views.py</p>
+</div>
+
+<div class="tarjeta" style="margin-top: 20px; background: #f0f7ff;">
+    <p>🔍 ¿Qué pasó exactamente?</p>
+    <p><strong>URL:</strong> /saludo/{{ nombre }}/</p>
+    <p><strong>View:</strong> recibió "{{ nombre }}" como parámetro</p>
+    <p><strong>Contexto:</strong> lo pasó al template en un diccionario</p>
+    <p><strong>Template:</strong> lo mostró con &#123;&#123; nombre &#125;&#125;</p>
+</div>
+
+<p style="margin-top: 20px;"><a href="/">← Volver al inicio</a></p>
+{% endblock %}

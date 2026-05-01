@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<h2>¡Hola! Este es tu primer proyecto Django.</h2>
+<p>Probá escribir tu nombre en la URL:</p>
+<p><strong>http://127.0.0.1:8000/saludo/tunombre/</strong></p>
+<div class="tarjeta">
+    <p>💡 Lo que acaba de pasar:</p>
+    <p>1. Escribiste una URL en el navegador</p>
+    <p>2. Django la buscó en urls.py</p>
+    <p>3. Ejecutó la función en views.py</p>
+    <p>4. Mostró este template HTML</p>
+</div>
+{% endblock %}
